@@ -24,7 +24,7 @@
               {
                 "group": "Cloud Accounts",
                 "expanded": false,
-                "icon": "pencil",
+                "icon": "book-open-cover",
                 "pages": [
                   "aws",
                   "azure",
