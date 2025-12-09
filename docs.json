@@ -12,42 +12,25 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "products": "Sysdig Secure",
-    "icon": "cloud",
     "tabs": [
       {
         "tab": "Guides",
         "groups": [
           {
             "group": "Getting started",
+            "icon": "play",
             "pages": [
               "onboarding",
-              "quickstart",
-              "development"
-            ]
-          },
-          {
-            "group": "Customization",
-            "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              {
+                "group": "Cloud Accounts",
+                "expanded": false,
+                "icon": "pencil",
+                "pages": [
+                  "aws",
+                  "azure",
+                  "gcp"
+                ]
+              }
             ]
           }
         ]
