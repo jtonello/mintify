@@ -1,5 +1,7 @@
+---
 title: 'Azure'
 description: 'Connect to Sysdig'
+---
 
 This topic describes how to connect your Azure environment to Sysdig. You can connect single subscriptions or entire tenants using Terraform. Azure coverage includes Cloud Security Posture Management (CSPM), Cloud Detection and Response (CDR), Cloud Infrastructure Entitlement Management (CIEM) and Vulnerability Management (VM).
 
