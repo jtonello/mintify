@@ -12,6 +12,8 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
+    "products": "Sysdig Secure",
+    "icon": "cloud",
     "tabs": [
       {
         "tab": "Guides",
