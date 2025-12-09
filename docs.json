@@ -33,12 +33,17 @@
           },
           {
             "group": "On-Prem",
-            "expanded": false,
-            "icon": "building",
             "pages": [
-              "linux",
-              "kubernetes",
-              "other"
+              {
+                "group": "Hosts",
+                "expanded": false,
+                "icon": "building",
+                "pages": [
+                  "linux",
+                  "kubernetes",
+                  "other"
+                ]
+              }
             ]
           }
         ]
