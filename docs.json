@@ -7,6 +7,7 @@
     "light": "#07C983",
     "dark": "#15803D"
   },
+  "styling": {"eyebrows": "breadcrumbs"},
   "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
