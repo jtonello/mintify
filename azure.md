@@ -3,19 +3,20 @@ title: 'Azure'
 description: 'Connect to Sysdig'
 ---
 
-This topic describes how to connect your Azure environment to Sysdig. You can connect single subscriptions or entire tenants using Terraform. Azure coverage includes Cloud Security Posture Management (CSPM), Cloud Detection and Response (CDR), Cloud Infrastructure Entitlement Management (CIEM) and Vulnerability Management (VM).
+This topic describes how to connect your Azure environment to Sysdig. You can connect single subscriptions or entire tenants using Terraform. 
 
-## Cloud Security Posture Management (CSPM)
+<Accordion title='Cloud Security Posture Management (CSPM)'>
 
-Cloud Security Posture Management (CSPM):
+**Cloud Security Posture Management (CSPM):**
 
 * Monitors and detects misconfigurations in your cloud resources.  
 * Ensures your cloud environment complies with industry standards and regulations.  
 * Provides a comprehensive inventory of all cloud assets, helping you maintain visibility and control over your environment.
 
 To enable CSPM, connect your Azure environment.
+</Accordion>
 
-## Review Azure Roles and Permissions
+<Accordion title='Review Azure Roles and Permissions'>
 
 ### Security Principals
 
@@ -32,6 +33,7 @@ Azure Identity and Access Management (IAM) is separated into two control planes:
 * [Azure RBAC Roles](https://learn.microsoft.com/en-us/azure/role-based-access-control/overview): Applied to the Subscription or Management Group being onboarded.
 
 ## Prerequisites
+</Accordion>
 
 * Sysdig Secure SaaS with Admin permissions  
 * Terraform v1.5.0+ installed  
