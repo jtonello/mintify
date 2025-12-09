@@ -1,4 +1,4 @@
----
+--
 title: 'AWS Onboarding'
 description: 'This topic describes how to connect your AWS environment to Sysdig Secure. You can connect Single Accounts or entire Organization Accounts using Terraform or CloudFormation.'
 ---
@@ -18,7 +18,7 @@ description: 'This topic describes how to connect your AWS environment to Sysdig
 <details>
 <summary>Click to Learn More About Using Terraform</summary>
 
-  - For Terraform, use the command line to export your AWS keys, or see the [AWS Terraform Provider documentation](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#authentication-and-configuration){target="_blank"} for other ways to authenticate.
+  - For Terraform, use the command line to export your AWS keys, or see the [AWS Terraform Provider documentation](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#authentication-and-configuration) for other ways to authenticate.
 
 ```
     $ export AWS_ACCESS_KEY_ID="anaccesskey"
@@ -26,7 +26,7 @@ description: 'This topic describes how to connect your AWS environment to Sysdig
     $ export AWS_REGION="us-east-1"
 ```
 
-If you're using [AWS CLI](https://aws.amazon.com/cli/){target="_blank"}, edit the `/home/user/.aws/credentials` file:
+If you're using [AWS CLI](https://aws.amazon.com/cli/), edit the `/home/user/.aws/credentials` file:
 ```
 [default]
 aws_access_key_id=anaccesskey
@@ -53,22 +53,22 @@ $ aws sts get-caller-identity
         <td align="center" colspan="2"><b>Single Account Installations Policy</b></td>
     </tr>
     <tr>
-        <td><a href="https://docs.aws.amazon.com/aws-managed-policy/latest/reference/IAMFullAccess.html" target="_blank">IAMFullAccess</a></td>
+        <td><a href="https://docs.aws.amazon.com/aws-managed-policy/latest/reference/IAMFullAccess.html">IAMFullAccess</a></td>
         <td>Required to create IAM Roles and associated permissions.</td>
     </tr>
     <tr>
         <td align="center" colspan="2"><b>Organization installations Policies</b></td>
     </tr>
     <tr>
-        <td><a href="https://docs.aws.amazon.com/aws-managed-policy/latest/reference/IAMFullAccess.html" target="_blank">IAMFullAccess</a></td>
+        <td><a href="https://docs.aws.amazon.com/aws-managed-policy/latest/reference/IAMFullAccess.html">IAMFullAccess</a></td>
         <td>Required to create IAM Roles and associated permissions.</td>
     </tr>
     <tr>
-        <td><a href="https://docs.aws.amazon.com/aws-managed-policy/latest/reference/AWSOrganizationsReadOnlyAccess.html" target="_blank">AWSOrganizationsReadOnlyAccess</a></td>
+        <td><a href="https://docs.aws.amazon.com/aws-managed-policy/latest/reference/AWSOrganizationsReadOnlyAccess.html">AWSOrganizationsReadOnlyAccess</a></td>
         <td>Required to list Accounts and OUIDs in your Organization.</td>
     </tr>
     <tr>
-        <td><a href="https://docs.aws.amazon.com/aws-managed-policy/latest/reference/AWSCloudFormationFullAccess.html" target="_blank">AWSCloudFormationFullAccess</a></td>
+        <td><a href="https://docs.aws.amazon.com/aws-managed-policy/latest/reference/AWSCloudFormationFullAccess.html">AWSCloudFormationFullAccess</a></td>
         <td>Required to create a CloudFormation StackSet that creates IAM roles in each Account in your Organization.</td>
     </tr>
 </table>
