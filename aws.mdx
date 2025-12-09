@@ -15,7 +15,7 @@ description: 'This topic describes how to connect your AWS environment to Sysdig
 - An **AWS user or role** with permission to install [IAM policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/id.html), as shown in the table below.
 - A local workstation with **Terraform v1.5+** installed or access to **CloudFormation**.
 
-::: details Click to Learn More About Using Terraform
+details Click to Learn More About Using Terraform
   - For Terraform, use the command line to export your AWS keys, or see the [AWS Terraform Provider documentation](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#authentication-and-configuration){target="_blank"} for other ways to authenticate.
 
 ```
@@ -42,9 +42,9 @@ Check your workstation's connection and authentication with AWS with this comman
 $ aws sts get-caller-identity
 ```
 
-:::
 
-::: details Click to Learn More About IAM Permissions
+
+ details Click to Learn More About IAM Permissions
 <table>
     <tr>
         <td align="center" colspan="2"><b>Single Account Installations Policy</b></td>
@@ -69,7 +69,7 @@ $ aws sts get-caller-identity
         <td>Required to create a CloudFormation StackSet that creates IAM roles in each Account in your Organization.</td>
     </tr>
 </table>
-:::
+
 
 ## 2. Collect Your Account Details
 <div style="float: right; padding: 10px;">
@@ -132,7 +132,7 @@ Select the desired AWS account to review the individual services in the detail d
 
 ## Further Reading
 
-::: details Learn More About Permissions
+details Learn More About Permissions
 
 ### Permissions Granted to Sysdig
 The above installation creates two IAM Roles that Sysdig can access. These Roles have the following permissions:
@@ -157,12 +157,11 @@ The above installation creates two IAM Roles that Sysdig can access. These Roles
     - `bedrock:ListGuardrails`
     - `bedrock:GetGuardrail`
     - `bedrock:GetModelInvocationLoggingConfiguration`
-:::
 
-::: details Learn More About Identies Shared with Sysdig
+
+details Learn More About Identies Shared with Sysdig
 ### Identities
 Two [AWS identities](https://docs.aws.amazon.com/IAM/latest/UserGuide/id.html){:target="_blank"} are required in the onboarding process:
 - *Installer*: Either an AWS user or a role used to perform the onboarding. Sysdig does not have access to this identity.
 - *Sysdig*: A set of IAM Roles created during onboarding with specific, less permissive permissions attached. Sysdig is given access to these roles.
-:::
 
