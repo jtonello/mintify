@@ -13,8 +13,7 @@ This topic describes how to connect your AWS environment to Sysdig Secure. You c
 - An **AWS user or role** with permission to install [IAM policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/id.html), as shown in the table below.
 - A local workstation with **Terraform v1.5+** installed or access to **CloudFormation**.
 
-<details>
-  <summary>Click to Learn More About Using Terraform</summary>
+<Accordion title="Click to Learn More About Using Terraform">
 
   * For Terraform, use the command line to export your AWS keys, or see the [AWS Terraform Provider documentation](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#authentication-and-configuration) for other ways to authenticate.
 
@@ -45,10 +44,9 @@ This topic describes how to connect your AWS environment to Sysdig Secure. You c
   ```
   $ aws sts get-caller-identity
   ```
-</details>
+</Accordion>
 
-<details>
-  <summary>Click to Learn More About IAM Permissions</summary>
+<Accordion title="Click to Learn More About IAM Permissions">
 
   <table>
     <tr>
@@ -79,15 +77,14 @@ This topic describes how to connect your AWS environment to Sysdig Secure. You c
       <td>Required to create a CloudFormation StackSet that creates IAM roles in each Account in your Organization.</td>
     </tr>
   </table>
-</details>
+</Accordion>
 
 ## 2. Collect Your Account Details
 
 <img
   src="./images/aws_account_id_small.png"
-  width="200"
-  height"400"
-  style={{float: "right"}}
+  style={{height: "auto", width: "100px"}}
+  noZoom
 />
 
 - Sign in to the **AWS Console**. For an **Organization**, ensure you sign in to your organization's management account.
@@ -99,7 +96,6 @@ This topic describes how to connect your AWS environment to Sysdig Secure. You c
 <img
   src="./images/wizard.png"
   width="400"
-  style={{float: "right"}}
 />
 
 - Log in to **Sysdig Secure**.
@@ -137,20 +133,18 @@ $ terraform init && terraform apply
 
 Select the desired AWS account to review the individual services in the detail drawer. There you can view the status of each feature you've enabled.
 
-<details>
-  <summary>See an Example of the Health Status for CSPM</summary>
+<Accordion title="See an Example of the Health Status for CSPM">
 
   | **CSPM Status**       | **Description**                                                                                                                                                                                                                                                                                                                              |
   | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
   | ✅ **Healthy**         | The account has been successfully connected, and all the resources have been scanned.                                                                                                                                                                                                                                                        |
   | **! Needs Attention** | Some features are not working properly.                                                                                                                                                                                                                                                                                                      |
   | ❌ **Error**           | Authentication errors. For example: <ul><li>Invalid account ID</li><li>Invalid client secret</li><li>Invalid access credentials</li><li>Access token errors</li><li>Deny policy created by the user is preventing Sysdig from collecting resources</li><li>The scan takes too long and eventually times out.</li><li>Unknown error</li></ul> |
-</details>
+</Accordion>
 
 ## Further Reading
 
-<details>
-  <summary>Learn More About Permissions</summary>
+<Accordion title="Learn More About Permissions">
 
   ### Permissions Granted to Sysdig
 
@@ -176,10 +170,9 @@ Select the desired AWS account to review the individual services in the detail d
       * `bedrock:ListGuardrails`
       * `bedrock:GetGuardrail`
       * `bedrock:GetModelInvocationLoggingConfiguration`
-</details>
+</Accordion>
 
-<details>
-  <summary>Learn More About Identies Shared with Sysdig</summary>
+<Accordion title="Learn More About Identies Shared with Sysdig">
 
   ### Identities
 
@@ -187,4 +180,4 @@ Select the desired AWS account to review the individual services in the detail d
 
   * *Installer*: Either an AWS user or a role used to perform the onboarding. Sysdig does not have access to this identity.
   * *Sysdig*: A set of IAM Roles created during onboarding with specific, less permissive permissions attached. Sysdig is given access to these roles.
-</details>
+</Accordion>
