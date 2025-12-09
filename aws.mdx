@@ -44,7 +44,7 @@ $ aws sts get-caller-identity
 
 
 
- details Click to Learn More About IAM Permissions
+details Click to Learn More About IAM Permissions
 <table>
     <tr>
         <td align="center" colspan="2"><b>Single Account Installations Policy</b></td>
@@ -80,7 +80,6 @@ $ aws sts get-caller-identity
 - Expand the dropdown in the top right corner of the **AWS Console** and copy your **Account ID**.
 - *Optional Organization Unit IDs.* By default, your entire AWS Organization will be onboarded. If you want to restrict onboarding to a subset of your Organization, you can gather specific OUIDs now and enter them in the following steps.
 
-<br clear="all">
 
 ## 3. Connect with Terraform
 
@@ -160,8 +159,9 @@ The above installation creates two IAM Roles that Sysdig can access. These Roles
 
 
 details Learn More About Identies Shared with Sysdig
+
 ### Identities
-Two [AWS identities](https://docs.aws.amazon.com/IAM/latest/UserGuide/id.html){:target="_blank"} are required in the onboarding process:
+Two [AWS identities](https://docs.aws.amazon.com/IAM/latest/UserGuide/id.html) are required in the onboarding process:
 - *Installer*: Either an AWS user or a role used to perform the onboarding. Sysdig does not have access to this identity.
 - *Sysdig*: A set of IAM Roles created during onboarding with specific, less permissive permissions attached. Sysdig is given access to these roles.
 
