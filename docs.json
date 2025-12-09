@@ -17,10 +17,8 @@
         "tab": "Guides",
         "groups": [
           {
-            "group": "Getting started",
-            "icon": "play",
+            "group": "Get started",
             "pages": [
-              "onboarding",
               {
                 "group": "Cloud Accounts",
                 "expanded": false,
@@ -29,6 +27,21 @@
                   "aws",
                   "azure",
                   "gcp"
+                ]
+              }
+            ]
+          },
+          {
+            "group": "On-Prem",
+            "pages": [
+              {
+                "group": "Hosts",
+                "expanded": false,
+                "icon": "building",
+                "pages": [
+                  "linux",
+                  "kubernetes",
+                  "other"
                 ]
               }
             ]
