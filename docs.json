@@ -28,24 +28,19 @@
                   "azure",
                   "gcp"
                 ]
-              }
-            ]
-          },
-          {
-            "group": "On-Prem",
-            "pages": [
-              {
-                "group": "Hosts",
-                "expanded": false,
-                "icon": "building",
-                "pages": [
-                  "linux",
-                  "kubernetes",
-                  "other"
+            },
+            {
+              "group": "On-Prem",
+              "expanded": false,
+              "icon": "building",
+              "pages": [
+                "linux",
+                "kubernetes",
+                "other"
                 ]
-              }
-            ]
-          }
+                }
+              ]
+            }
         ]
       },
       {
