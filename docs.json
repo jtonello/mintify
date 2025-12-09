@@ -20,7 +20,7 @@
             "group": "Get started",
             "pages": [
               {
-                "group": "Cloud Account Onboarding",
+                "group": "Onboard Cloud Accounts",
                 "expanded": false,
                 "icon": "cloud",
                 "pages": [
@@ -30,7 +30,7 @@
                 ]
             },
             {
-              "group": "On-Prem Onboarding",
+              "group": "Onboard On-Prem",
               "expanded": false,
               "icon": "building",
               "pages": [
