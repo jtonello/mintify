@@ -1,5 +1,5 @@
 ---
-title: "Onboard Azure"
+title: "Azure"
 description: "Connect to Sysdig"
 ---
 
