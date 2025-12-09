@@ -15,7 +15,9 @@ description: 'This topic describes how to connect your AWS environment to Sysdig
 - An **AWS user or role** with permission to install [IAM policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/id.html), as shown in the table below.
 - A local workstation with **Terraform v1.5+** installed or access to **CloudFormation**.
 
-details Click to Learn More About Using Terraform
+<details>
+<summary>Click to Learn More About Using Terraform</summary>
+
   - For Terraform, use the command line to export your AWS keys, or see the [AWS Terraform Provider documentation](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#authentication-and-configuration){target="_blank"} for other ways to authenticate.
 
 ```
@@ -41,10 +43,11 @@ Check your workstation's connection and authentication with AWS with this comman
 ```
 $ aws sts get-caller-identity
 ```
+</details>
 
 
-
-details Click to Learn More About IAM Permissions
+<details>
+<summary>Click to Learn More About IAM Permissions</summary>
 <table>
     <tr>
         <td align="center" colspan="2"><b>Single Account Installations Policy</b></td>
@@ -69,6 +72,7 @@ details Click to Learn More About IAM Permissions
         <td>Required to create a CloudFormation StackSet that creates IAM roles in each Account in your Organization.</td>
     </tr>
 </table>
+</details>
 
 
 ## 2. Collect Your Account Details
@@ -76,7 +80,7 @@ details Click to Learn More About IAM Permissions
     <img src="./images/aws_account_id_small.png" width="200" />
 </div>
 
-- Sign in to the **AWS Console**. For an **Organization**, ensure you sign in to your organization’s management account.
+- Sign in to the **AWS Console**. For an **Organization**, ensure you sign in to your organization's management account.
 - Expand the dropdown in the top right corner of the **AWS Console** and copy your **Account ID**.
 - *Optional Organization Unit IDs.* By default, your entire AWS Organization will be onboarded. If you want to restrict onboarding to a subset of your Organization, you can gather specific OUIDs now and enter them in the following steps.
 
@@ -104,13 +108,13 @@ $ terraform init && terraform apply
 
 ## 4. Connect with CloudFormation
 - Log in to **Sysdig Secure**.
-- In a separate browser window, log in to your **AWS Account**. For Organization installs, be sure to log into your Organization’s Management Account.
+- In a separate browser window, log in to your **AWS Account**. For Organization installs, be sure to log into your Organization's Management Account.
 - For **Organization** accounts, in Step 2, enter your **AWS management account ID** and your OUID(s). For a **Single Account**, enter only your **AWS Account ID**.
 - In Step 3, click the **Launch Stack** button. This will shift you to an **AWS console** browser window. Follow any prompts in AWS to deploy the required resources, and be sure to check the Acknowledgements in the AWS Capabilities section.
 - When CloudFormation completes, click the **Complete Onboarding** button in the Sysdig dashboard. Your newly added account will appear in the Cloud Accounts page.
 
 ## 5. Check the Connection
-- To validate your AWS connection, navigate to Sysdig Secure’s **Integrations** > **Environments** > **AWS**.
+- To validate your AWS connection, navigate to Sysdig Secure's **Integrations** > **Environments** > **AWS**.
 - Click the **Added On** column heading to show the most recently added account on top.
 - The **Status** column shows the overall connection status:
   - Connected
@@ -118,20 +122,22 @@ $ terraform init && terraform apply
   - Needs Attention
   - Unknown
 
-Select the desired AWS account to review the individual services in the detail drawer. There you can view the status of each feature you’ve enabled. 
+Select the desired AWS account to review the individual services in the detail drawer. There you can view the status of each feature you've enabled. 
 
-::: details See an Example of the Health Status for CSPM 
+<details>
+<summary>See an Example of the Health Status for CSPM</summary>
 
 | **CSPM Status** | **Description**                                                  |
 |-----------------|-----------------------------------------------------------------------|
 | ✅ **Healthy**  | The account has been successfully connected, and all the resources have been scanned.|
 | **! Needs Attention** | Some features are not working properly.|
 | ❌ **Error** | Authentication errors. For example: <ul><li>Invalid account ID</li><li>Invalid client secret</li><li>Invalid access credentials</li><li>Access token errors</li><li>Deny policy created by the user is preventing Sysdig from collecting resources</li><li>The scan takes too long and eventually times out.</li><li>Unknown error</li></ul>|
-:::
+</details>
 
 ## Further Reading
 
-details Learn More About Permissions
+<details>
+<summary>Learn More About Permissions</summary>
 
 ### Permissions Granted to Sysdig
 The above installation creates two IAM Roles that Sysdig can access. These Roles have the following permissions:
@@ -156,12 +162,14 @@ The above installation creates two IAM Roles that Sysdig can access. These Roles
     - `bedrock:ListGuardrails`
     - `bedrock:GetGuardrail`
     - `bedrock:GetModelInvocationLoggingConfiguration`
+</details>
 
 
-details Learn More About Identies Shared with Sysdig
+<details>
+<summary>Learn More About Identies Shared with Sysdig</summary>
 
 ### Identities
 Two [AWS identities](https://docs.aws.amazon.com/IAM/latest/UserGuide/id.html) are required in the onboarding process:
 - *Installer*: Either an AWS user or a role used to perform the onboarding. Sysdig does not have access to this identity.
 - *Sysdig*: A set of IAM Roles created during onboarding with specific, less permissive permissions attached. Sysdig is given access to these roles.
-
+</details>
