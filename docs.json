@@ -39,8 +39,6 @@
                 "kubernetes",
                 "other"
                 ]
-                }
-              ]
             },
             {
               "group": "Configure Scans",
@@ -53,8 +51,9 @@
                 "Vulnerability Management",
                 "Workload Scanning"
               ]
-            },
-          
+            }
+          ]
+        },
           {
             "group": "API documentation",
             "pages": [
