@@ -141,7 +141,7 @@
           {
             "group": "Risk",
             "expanded": false,
-            "icon": "risks",
+            "icon": "umbrella-off",
             "pages": [
               "Accepted Risk",
               "Definitions"
@@ -150,7 +150,7 @@
           {
             "group": "Threats",
             "expanded": false,
-            "icon": "shelves",
+            "icon": "shield-alert",
             "pages": [
               "Activity",
               "Investigate",
@@ -160,7 +160,7 @@
           {
             "group": "Vulnerabilities",
             "expanded": false,
-            "icon": "risks",
+            "icon": "shield-question-mark",
             "pages": [
               "Components",
               "CVEs",
@@ -172,7 +172,7 @@
           {
             "group": "Compliance",
             "expanded": false,
-            "icon": "risks",
+            "icon": "laptop-minimal-check",
             "pages": [
               "Findings"
             ]
@@ -194,7 +194,7 @@
           {
             "group": "Reporting",
             "expanded": false,
-            "icon": "risks",
+            "icon": "clipboard-minus",
             "pages": [
               "Reports Manager",
               "Schedules"
@@ -203,7 +203,7 @@
           {
             "group": "Policies",
             "expanded": false,
-            "icon": "risks",
+            "icon": "vote",
             "pages": [
               "Automations",
               "Falco",
