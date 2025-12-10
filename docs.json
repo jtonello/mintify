@@ -41,12 +41,20 @@
                 ]
                 }
               ]
-            }
-        ]
-      },
-      {
-        "tab": "API reference",
-        "groups": [
+            },
+            {
+              "group": "Configure Scans",
+              "epanded": false,
+              "icon": "gear",
+              "pages": [
+                "Advanced CIEM",
+                "Host Scanning",
+                "Security Findings",
+                "Vulnerability Management",
+                "Workload Scanning"
+              ]
+            },
+          
           {
             "group": "API documentation",
             "pages": [
