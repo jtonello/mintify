@@ -23,16 +23,26 @@ This topic describes how to connect your AWS environment to Sysdig Secure. You c
       export AWS_REGION="us-east-1"
   ```
 
-  If you're using [AWS CLI](https://aws.amazon.com/cli/), edit the `/home/user/.aws/credentials` file:
+  If you're using [AWS CLI](https://aws.amazon.com/cli/), run `aws configure` from your workstation command line or edit the `/home/user/.aws/credentials` file:
+
+  From the CLI, it will look something like this:
+
+  ```
+  AWS Access Key ID [****************L64C]: 
+  AWS Secret Access Key [****************5JsZ]: 
+  AWS Session Token [****************y2Cp]: 
+  Default region name [us-east-1]: 
+  Default output format [None]:          # Leave blank
+  ```
 
   ```
   [default]
-  aws_access_key_id=anaccesskey
-  aws_secret_access_key=asecretkey
-  aws_session_token=atokenkey   # Sometimes necessary for orgranizations using SSO
+  aws_access_key_id=****************L64C
+  aws_secret_access_key=****************5JsZ
+  aws_session_token=****************y2Cp   # A long value sometimes necessary for orgranizations using SSO
   ```
 
-  You can also set your default AWS region in `/home/user/.aws/config` by adding:
+  You can also set your default AWS region as part of `aws configure` or set it in `/home/user/.aws/config` by adding:
 
   ```
   [default]
@@ -70,8 +80,8 @@ This topic describes how to connect your AWS environment to Sysdig Secure. You c
   <table>
   <tr>
   <td align="center" colspan="2">
-    
-  <b>Single Account Installations Policy</b>
+  <b>
+  Single Account Installations Policy</b>
 
   </td>
 
@@ -79,7 +89,8 @@ This topic describes how to connect your AWS environment to Sysdig Secure. You c
 
   <tr>
   <td>
-  <a href="https://docs.aws.amazon.com/aws-managed-policy/latest/reference/IAMFullAccess.html">IAMFullAccess</a>
+  <a href="https://docs.aws.amazon.com/aws-managed-policy/latest/reference/IAMFullAccess.html">
+  IAMFullAccess</a>
 
   </td>
 
@@ -100,7 +111,8 @@ This topic describes how to connect your AWS environment to Sysdig Secure. You c
 
   <tr>
   <td>
-  <a href="https://docs.aws.amazon.com/aws-managed-policy/latest/reference/IAMFullAccess.html">IAMFullAccess</a>
+  <a href="https://docs.aws.amazon.com/aws-managed-policy/latest/reference/IAMFullAccess.html">
+  IAMFullAccess</a>
 
   </td>
 
@@ -113,7 +125,8 @@ This topic describes how to connect your AWS environment to Sysdig Secure. You c
 
   <tr>
   <td>
-  <a href="https://docs.aws.amazon.com/aws-managed-policy/latest/reference/AWSOrganizationsReadOnlyAccess.html">AWSOrganizationsReadOnlyAccess</a>
+  <a href="https://docs.aws.amazon.com/aws-managed-policy/latest/reference/AWSOrganizationsReadOnlyAccess.html">
+  AWSOrganizationsReadOnlyAccess</a>
 
   </td>
 
@@ -126,7 +139,8 @@ This topic describes how to connect your AWS environment to Sysdig Secure. You c
 
   <tr>
   <td>
-  <a href="https://docs.aws.amazon.com/aws-managed-policy/latest/reference/AWSCloudFormationFullAccess.html">AWSCloudFormationFullAccess</a>
+  <a href="https://docs.aws.amazon.com/aws-managed-policy/latest/reference/AWSCloudFormationFullAccess.html">
+  AWSCloudFormationFullAccess</a>
 
   </td>
 
@@ -201,11 +215,11 @@ $ terraform init && terraform apply
 Select the desired AWS account to review the individual services in the detail drawer. There you can view the status of each feature you've enabled.
 
 <Accordion title="See an Example of the Health Status for CSPM">
-  | **CSPM Status**       | **Description**                                                                                                                                                                                                                                                                                                                                                                                                |
-  | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-  | ✅ **Healthy**         | The account has been successfully connected, and all the resources have been scanned.                                                                                                                                                                                                                                                                                                                          |
-  | **! Needs Attention** | Some features are not working properly.                                                                                                                                                                                                                                                                                                                                                                        |
-  | ❌ **Error**           | Authentication errors. For example: <ul>   <li>   Invalid account ID</li>      <li>   Invalid client secret</li>      <li>   Invalid access credentials</li>      <li>   Access token errors</li>      <li>   Deny policy created by the user is preventing Sysdig from collecting resources</li>      <li>   The scan takes too long and eventually times out.</li>      <li>   Unknown error</li>      </ul> |
+  | **CSPM Status**       | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+  | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+  | ✅ **Healthy**         | The account has been successfully connected, and all the resources have been scanned.                                                                                                                                                                                                                                                                                                                                                                      |
+  | **! Needs Attention** | Some features are not working properly.                                                                                                                                                                                                                                                                                                                                                                                                                    |
+  | ❌ **Error**           | Authentication errors. For example: <ul>     <li>     Invalid account ID</li>          <li>     Invalid client secret</li>          <li>     Invalid access credentials</li>          <li>     Access token errors</li>          <li>     Deny policy created by the user is preventing Sysdig from collecting resources</li>          <li>     The scan takes too long and eventually times out.</li>          <li>     Unknown error</li>          </ul> |
 </Accordion>
 
 ## Further Reading
