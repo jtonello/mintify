@@ -96,22 +96,21 @@
                 "Webhook"
               ]
             }
-          ]
-      },
+            ]
+          },
+
       {
-          "group": "Protect Your Workloads",
-          "pages": [
-            {
-              "group": "Install Host Shield",
-              "expanded": false,
-              "icon": "shield",
-              "pages": [
-                "Kubernetes",
-                "Linux",
-                "Windows"
-              ]
-            }
-          ]
+        "group": "Protect Your Workloads",
+        "pages": [
+          {
+            "group": "Install Host Shield",
+            "expanded": false,
+            "icon": "shield",
+            "pages": [
+              "Kubernetes",
+              "Linux",
+              "Windows"
+            ]
           },
           {
             "group": "Tune Your Setup",
@@ -124,7 +123,9 @@
             ]
           }
         ]
-      },
+      }
+    ]
+  },
       {
         "tab": "API Reference",
         "groups": [
