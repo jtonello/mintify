@@ -101,6 +101,15 @@ Only `IAMFullAccess` is required for individual accounts.
 
 - Sign in to the **AWS Console**. For an **Organization**, ensure you sign in to your organization's management account.
 - Expand the dropdown in the top right corner of the **AWS Console** and copy your **Account ID**.
+
+  You can also get your AWS AccountID by using this command via AWS CLI or the AWS Console terminal:
+
+  ```
+  aws sts get-caller-identity \
+      --query Account \
+      --output text
+  ```
+  
 - _Optional Organization Unit IDs._ By default, your entire AWS Organization will be onboarded. If you want to restrict onboarding to a subset of your Organization, you can gather specific OUIDs now and enter them in the following steps.
 
 ## 3. Connect with Terraform
