@@ -44,6 +44,21 @@ This topic describes how to connect your AWS environment to Sysdig Secure. You c
   ```
   $ aws sts get-caller-identity
   ```
+  Get your AWS Account ID from the CLI with this command:
+```
+aws sts get-caller-identity \
+    --query Account \
+    --output text
+```
+To see the **roles** associated with your account, use this AWS CLI command:
+```
+aws iam list-roles
+```
+To see the **policies** associated with your account, use this AWS CLI command:
+```
+aws iam list-policies
+```
+
 </Accordion>
 
 <Accordion title="Click to Learn More About IAM Permissions">
