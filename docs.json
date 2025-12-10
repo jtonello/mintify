@@ -51,6 +51,50 @@
                 "Vulnerability Management",
                 "Workload Scanning"
               ]
+            },
+            {
+              "group": "DevOps Integrations",
+              "expanded": false,
+              "icon": "code",
+              "pages": [
+                "AWS ECRS",
+                "Azure Container Registry",
+                "Backstage",
+                "GitHub Actions",
+                "GitLab",
+                "Google Registry",
+                "Harbor",
+                "IBM Container Registry",
+                "Jenkins",
+                "JFrog",
+                "Nexus",
+                "OpenShift",
+                "Private Registry",
+                "Quay.io",
+                "ServiceNow",
+                "Visual Studio Code"
+              ]
+            },
+            {
+              "group": "Third-Party Integrations",
+              "epanded": false,
+              "icon": "solar-system",
+              "pages": [
+                "Amazon SQS",
+                "Cribl",
+                "Elasticsearch",
+                "Google PubSub",
+                "Google SecOps",
+                "Google Security",
+                "IBM MCM",
+                "IBM QRadar",
+                "Kafka",
+                "Okta",
+                "Sentinel",
+                "Splunk",
+                "Syslog",
+                "Webhook"
+              ]
             }
           ]
         }
