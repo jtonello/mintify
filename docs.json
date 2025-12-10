@@ -97,7 +97,32 @@
               ]
             }
           ]
-        }
+      },
+      {
+          "group": "Protect Your Workloads",
+          "pages": [
+            {
+              "group": "Install Host Shield",
+              "expanded": false,
+              "icon": "shield",
+              "pages": [
+                "Kubernetes",
+                "Linux",
+                "Windows"
+              ]
+            }
+          ]
+          },
+          {
+            "group": "Tune Your Setup",
+            "expanded": false,
+            "icon": "circle-half-stroke",
+            "pages": [
+              "Automatic Onboarding",
+              "Selective Onboarding",
+              "Permissions"
+            ]
+          }
         ]
       },
       {
