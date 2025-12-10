@@ -24,10 +24,10 @@
                 "expanded": false,
                 "icon": "cloud",
                 "pages": [
-                  "secure/aws",
-                  "secure/azure",
-                  "secure/GCP",
-                  "secure/OCI"
+                  "secure/onboard/aws",
+                  "secure/onboard/azure",
+                  "secure/onboard/GCP",
+                  "secure/onboard/OCI"
                 ]
             },
             {
