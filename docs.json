@@ -14,10 +14,10 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Sysdig Secure",
         "groups": [
           {
-            "group": "Get Started with Sysdig Secure",
+            "group": "Get Started",
             "pages": [
               {
                 "group": "Onboard Cloud Accounts",
