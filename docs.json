@@ -53,7 +53,12 @@
               ]
             }
           ]
-        },
+        }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
           {
             "group": "API documentation",
             "pages": [
