@@ -123,7 +123,100 @@
             ]
           }
         ]
-      }
+      },
+
+      {
+        "group": "Using Sysdig",
+        "pages": [
+          {
+            "group": "Inventory",
+            "expanded": false,
+            "icon": "shelves",
+            "pages": [
+              "Network",
+              "Resources",
+              "Zones"
+            ]
+          },
+          {
+            "group": "Risk",
+            "expanded": false,
+            "icon": "risks",
+            "pages": [
+              "Accepted Risk",
+              "Definitions"
+            ]
+          },
+          {
+            "group": "Threats",
+            "expanded": false,
+            "icon": "shelves",
+            "pages": [
+              "Activity",
+              "Investigate",
+              "Respond"
+            ]
+          },
+          {
+            "group": "Vulnerabilities",
+            "expanded": false,
+            "icon": "risks",
+            "pages": [
+              "Components",
+              "CVEs",
+              "Feeds",
+              "Findings",
+              "Scanning"
+            ]
+          },
+          {
+            "group": "Compliance",
+            "expanded": false,
+            "icon": "risks",
+            "pages": [
+              "Findings"
+            ]
+          },
+          {
+            "group": "Identity",
+            "expanded": false,
+            "icon": "address-card",
+            "pages": [
+              "Findings",
+              "Groups",
+              "IAM Policies",
+              "Roles",
+              "Service Identities",
+              "Use Cases",
+              "Users"
+            ]
+          },
+          {
+            "group": "Reporting",
+            "expanded": false,
+            "icon": "risks",
+            "pages": [
+              "Reports Manager",
+              "Schedules"
+            ]
+          },
+          {
+            "group": "Policies",
+            "expanded": false,
+            "icon": "risks",
+            "pages": [
+              "Automations",
+              "Falco",
+              "Fields Library",
+              "Posture",
+              "Supply Chain",
+              "Threat Detection",
+              "Threat Exclusions",
+              "Vulnerability Management"
+            ]
+          }
+        ]
+      }    
     ]
   },
       {
