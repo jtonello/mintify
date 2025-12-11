@@ -10,7 +10,7 @@ This topic describes how to connect your AWS environment to Sysdig Secure. You c
 
 ## 1. Prerequisites
 
-- A **Sysdig Secure administrator** account.
+- A **Sysdig Secure administrator** account. 
 - An **AWS user or role** with permission to install [IAM policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/id.html), as shown in the table below.
 - A local workstation with **Terraform v1.5+** installed or access to **CloudFormation**.
 
@@ -34,7 +34,8 @@ This topic describes how to connect your AWS environment to Sysdig Secure. You c
   Default region name [us-east-1]: 
   Default output format [None]:          # Leave blank
   ```
-In the `~/.aws/credentials` file, it will look something like this:
+
+  In the `~/.aws/credentials` file, it will look something like this:
 
   ```
   [default]
@@ -78,14 +79,13 @@ In the `~/.aws/credentials` file, it will look something like this:
 </Accordion>
 
 <Accordion title="Click to Learn More About IAM Permissions" icon="circle-question">
-| Access   | Description                                  |
-| -------- | ---------------------------------------------|
-| [IAMFullAccess](https://docs.aws.amazon.com/aws-managed-policy/latest/reference/IAMFullAccess.html) | Required to create IAM Roles and associated permissions. |
-| [AWSOrganizationsReadOnlyAccess](https://docs.aws.amazon.com/aws-managed-policy/latest/reference/AWSOrganizationsReadOnlyAccess.html) | Required to list Accounts and OUIDs in your Organization. |
-| [AWSCloudFormationFullAccess](https://docs.aws.amazon.com/aws-managed-policy/latest/reference/AWSCloudFormationFullAccess.html) | Required to create a CloudFormation StackSet that creates IAM roles in each Account in your Organization. |
+  | Access                                                                                                                                | Description                                                                                               |
+  | ------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+  | [IAMFullAccess](https://docs.aws.amazon.com/aws-managed-policy/latest/reference/IAMFullAccess.html)                                   | Required to create IAM Roles and associated permissions.                                                  |
+  | [AWSOrganizationsReadOnlyAccess](https://docs.aws.amazon.com/aws-managed-policy/latest/reference/AWSOrganizationsReadOnlyAccess.html) | Required to list Accounts and OUIDs in your Organization.                                                 |
+  | [AWSCloudFormationFullAccess](https://docs.aws.amazon.com/aws-managed-policy/latest/reference/AWSCloudFormationFullAccess.html)       | Required to create a CloudFormation StackSet that creates IAM roles in each Account in your Organization. |
 
-Only `IAMFullAccess` is required for individual accounts.
-
+  Only `IAMFullAccess` is required for individual accounts.
 </Accordion>
 
 ## 2. Collect Your Account Details
@@ -108,7 +108,6 @@ Only `IAMFullAccess` is required for individual accounts.
       --query Account \
       --output text
   ```
-  
 - _Optional Organization Unit IDs._ By default, your entire AWS Organization will be onboarded. If you want to restrict onboarding to a subset of your Organization, you can gather specific OUIDs now and enter them in the following steps.
 
 ## 3. Connect with Terraform
@@ -157,11 +156,11 @@ $ terraform init && terraform apply
 Select the desired AWS account to review the individual services in the detail drawer. There you can view the status of each feature you've enabled.
 
 <Accordion title="See an Example of the Health Status for CSPM" icon="circle-question">
-  | **CSPM Status**       | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-  | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-  | ✅ **Healthy**         | The account has been successfully connected, and all the resources have been scanned.                                                                                                                                                                                                                                                                                                                                                                      |
-  | **! Needs Attention** | Some features are not working properly.                                                                                                                                                                                                                                                                                                                                                                                                                    |
-  | ❌ **Error**           | Authentication errors. For example: <ul>     <li>     Invalid account ID</li>          <li>     Invalid client secret</li>          <li>     Invalid access credentials</li>          <li>     Access token errors</li>          <li>     Deny policy created by the user is preventing Sysdig from collecting resources</li>          <li>     The scan takes too long and eventually times out.</li>          <li>     Unknown error</li>          </ul> |
+  | **CSPM Status**       | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+  | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+  | ✅ **Healthy**         | The account has been successfully connected, and all the resources have been scanned.                                                                                                                                                                                                                                                                                                                                                                                            |
+  | **! Needs Attention** | Some features are not working properly.                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+  | ❌ **Error**           | Authentication errors. For example: <ul>      <li>      Invalid account ID</li>            <li>      Invalid client secret</li>            <li>      Invalid access credentials</li>            <li>      Access token errors</li>            <li>      Deny policy created by the user is preventing Sysdig from collecting resources</li>            <li>      The scan takes too long and eventually times out.</li>            <li>      Unknown error</li>            </ul> |
 </Accordion>
 
 ## Further Reading
