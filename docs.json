@@ -23,12 +23,7 @@
                 "group": "Onboard Cloud Accounts",
                 "expanded": false,
                 "icon": "cloud",
-                "pages": [
-                  "secure/onboard/aws",
-                  "secure/onboard/azure",
-                  "secure/onboard/GCP",
-                  "secure/onboard/OCI"
-                ]
+                "pages": ["secure/onboard/onboarding#aws"]
             },
             {
               "group": "Onboard On-Prem",
