@@ -18,13 +18,9 @@
         "groups": [
           {
             "group": "Get Started",
+            "icon": "cloud",
             "pages": [
-              {
-                "group": "Onboard Cloud Accounts",
-                "expanded": false,
-                "icon": "cloud",
-                "pages": ["secure/onboard/onboarding"]
-            },
+              "secure/onboard/onboarding",
             {
               "group": "Onboard On-Prem",
               "expanded": false,
