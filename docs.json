@@ -23,7 +23,7 @@
               "secure/onboard/onprem",
           {
               "group": "Configure Scans",
-              "epanded": false,
+              "expanded": false,
               "icon": "gear",
               "pages": [
                 "Advanced CIEM",
@@ -58,7 +58,7 @@
             },
             {
               "group": "Third-Party Integrations",
-              "epanded": false,
+              "expanded": false,
               "icon": "solar-system",
               "pages": [
                 "Amazon SQS",
@@ -221,21 +221,31 @@
           {
             "group": "Get Started",
             "pages": [
-              "monitor/index"
-            ]
-          },
-          {
-            "group": "Cloud Onboarding",
+              "monitor/index",
+            {
+              "group": "Cloud Onboarding",
+              "expanded": false,
+              "icon": "cloud",
+              "pages": [
+                "monitor/aws/",
+                "monitor/azure",
+                "monitor/gcp",
+                "monitor/kubernetes",
+                "monitor/hosts"
+              ]
+            },
+           {
+            "group": "Configure Scans",
+            "expanded": false,
+            "icon": "gear",
             "pages": [
-              "monitor/aws/",
-              "monitor/azure",
-              "monitor/gcp",
-              "monitor/kubernetes",
-              "monitor/hosts"
+              "test"
             ]
           }
         ]
-      },
+      }          
+    ]
+  },
       {
         "tab": "API Reference",
         "groups": [
