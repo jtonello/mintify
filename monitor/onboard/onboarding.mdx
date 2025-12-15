@@ -6,7 +6,7 @@ icon: "cloud"
 
 <Tabs>
   <Tab title="AWS Cloud Watch">
-    # CloudWatch Monitoring
+    ## CloudWatch Monitoring
 
     You can forward metrics from AWS CloudWatch to Sysdig Monitor using AWS Metric Streams or the CloudWatch API. This provides cloud account visibility over AWS services, such as Lambda, Elastic Load Balancers (ELB) and Simple Storage Service (S3). You can configure Cloudwatch integration using Cloudformation or Terraform.
 
@@ -33,11 +33,11 @@ icon: "cloud"
       - aws_kinesis_firehose_delivery_stream.sysdig_metric_kinesis_firehose
       - aws_s3_bucket.sysdig_stream_backup_bucket
     </Accordion>
-    ### Provision AWS CloudWatch Metric Streams with Terraform
+    ## Provision AWS CloudWatch Metric Streams with Terraform
 
     For details on provisioning AWS CloudWatch Metric Streams, see the [Sysdig Monitor Terraform Repository](https://github.com/sysdiglabs/terraform-aws-monitor-for-cloud/tree/main).
 
-    ### Provision AWS CloudWatch Metric Streams with Cloudformation
+    ## Provision AWS CloudWatch Metric Streams with Cloudformation
 
     1. Log in to Sysdig Monitor as an Admin.
     2. In the left sidebar, select Integration \> Cloud Accounts.\
@@ -45,7 +45,7 @@ icon: "cloud"
     3. Select Add Account \> AWS \> CloudWatch Monitoring \> CloudWatch Metric Streams.
     4. Open Use Cloudformation Template to load a Cloudformation stack that provisions CloudWatch Metric Streams.
 
-    ### Connect Sysdig Monitor to the AWS CloudWatch API
+    ## Connect Sysdig Monitor to the AWS CloudWatch API
 
     Sysdig Monitor recommends using role delegation to poll the CloudWatch API in your AWS account. To enable this, Sysdig Monitor must be allowed to assume an IAM role in your AWS account with the necessary permissions. For instructions to set up cross-account IAM role delegation, see [Enable AWS Role Delegation with API](https://docs.sysdig.com/en/docs/administration/administration-settings/outbound-integrations/aws-integrate-aws-account-and-cloudwatch-metrics-optional/integrate-with-aws-role-delegation/#enable-aws-role-delegation-with-api).
 
