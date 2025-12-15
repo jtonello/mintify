@@ -222,7 +222,7 @@
             "group": "Get Started",
             "pages": [
               "monitor/index",
-              "monitor/onboarding",
+              "monitor/onboard/onboarding",
             {
               "group": "Advisor",
               "expanded": false,
