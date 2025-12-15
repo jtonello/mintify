@@ -225,12 +225,13 @@
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Cloud Onboarding",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "monitor/aws/",
+              "monitor/azure",
+              "monitor/gcp",
+              "monitor/kubernetes",
+              "monitor/hosts"
             ]
           }
         ]
