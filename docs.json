@@ -21,17 +21,7 @@
             "pages": [
               "secure/onboard/onboarding",
               "secure/onboard/onprem",
-            {
-              "group": "Onboard On-Prem",
-              "expanded": false,
-              "icon": "building",
-              "pages": [
-                "linux",
-                "kubernetes",
-                "other"
-                ]
-            },
-            {
+          {
               "group": "Configure Scans",
               "epanded": false,
               "icon": "gear",
