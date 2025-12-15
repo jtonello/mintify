@@ -170,31 +170,15 @@ icon: "cloud"
     Select the desired AWS account to review the individual services in the detail drawer. There you can view the status of each feature you've enabled.
 
     <Accordion title="See an Example of the Health Status for CSPM" icon="circle-question">
-      | **CSPM Status**       | **Description**                                             | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | | ✅ **Healthy**         | The account has been successfully connected, and all the resources have been scanned.                                                            | **! Needs Attention** | Some features are not working properly.                     | ❌ **Error**           | Authentication errors. For example: <ul>
-               <li>
-               Invalid account ID</li>
+      | **CSPM Status**       | **Description**                                             | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | | ✅ **Healthy**         | The account has been successfully connected, and all the resources have been scanned.                                                            | **! Needs Attention** | Some features are not working properly.                     | ❌ **Error**           | Authentication errors. For example:
 
-                        <li>
-               Invalid client secret</li>
-
-                        <li>
-               Invalid access credentials</li>
-
-                        <li>
-               Access token errors</li>
-
-                        <li>
-               Deny policy created by the user is preventing Sysdig from collecting resources</li>
-
-                        <li>
-               The scan takes too long and eventually times out.</li>
-
-                        <li>
-               Unknown error</li>
-
-                        </ul>
-
-       |
+      - Invalid account ID
+      - Invalid client secret
+      - Invalid access credentials
+      - Access token errors
+      - Deny policy created by the user is preventing Sysdig from collecting resources
+      - The scan takes too long and eventually times out.
+      - Unknown error |
     </Accordion>
     ## Further Reading
 
@@ -300,7 +284,6 @@ icon: "cloud"
     ```
 
     2. You will be presented with a web page to select your user account. Be sure to log in as the user you configured in Step 1.
-      
     3. Confirm you are logged in as the correct user by running:
 
     ```
