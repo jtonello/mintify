@@ -19,6 +19,7 @@
           {
             "group": "Get Started",
             "pages": [
+              "secure/onboard/",
               "secure/onboard/onboarding",
               "secure/onboard/onprem",
           {
