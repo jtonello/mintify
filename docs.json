@@ -122,7 +122,7 @@
           {
             "group": "Risk",
             "expanded": false,
-            "icon": "face-surprise",
+            "icon": "asterisk",
             "pages": [
               "Accepted Risk",
               "Definitions"
