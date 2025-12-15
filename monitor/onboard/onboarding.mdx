@@ -177,26 +177,3 @@ icon: "cloud"
   </Tab>
 </Tabs>
 
-Follow the installation instructions in this topic to install Cluster Shield and Host Shield in your monitoring environment. They send system performance metrics and events to Sysdig Monitor, ensuring comprehensive visibility into your infrastructure. Review the requirements and select the installation path that best suits your setup.
-
-If you are both a Sysdig Monitor and Secure user, follow the [Sysdig Secure installation](/secure/onboard/onboarding#aws) process to obtain the features of both products.
-
-## Cluster Shield and Host Shield
-
-The Sysdig Host Shield and Cluster Shield streamline the deployment, management, and configuration of the installation components of Sysdig Monitor. By consolidating multiple deployments into just two containerized components, the Host Shield and Cluster Shield simplify operations in Kubernetes environments, helping you review the components and choose an installation path that fits your environment. Sysdig Monitor collects system metrics and events and offers comprehensive visibility into your infrastructure.
-
-The Sysdig Cluster Shield and Host Shield are the installation components of Sysdig Monitor. They unify multiple previously-separate agent deployments into a single containerized component.
-
-Cluster Shield simplifies deploying, configuring, and managing the installation component of Sysdig Monitor at the cluster level, whereas Host Shield simplifies the installation in the host environment.
-
-## Prometheus Remote Write
-
-You can use Prometheus Remote Write to collect Prometheus metrics from your Prometheus servers. This is best suited for environments where the Cluster Shield and Host Shield are not available. However, if you choose to use Prometheus Remote Write, the following features of Sysdig Monitor will not be available as it does not collect syscall() events.
-
-- System metrics
-- Extended Label Sets
-- The Scope Tree
-
-## Integrations
-
-Integrations for Sysdig Monitor include application integrations, cloud integrations, and custom integrations.
