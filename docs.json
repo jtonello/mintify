@@ -219,9 +219,9 @@
         "tab": "Sysdig Monitor",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "Get Started",
             "pages": [
-              "monitor/"
+              "monitor/index"
             ]
           },
           {
