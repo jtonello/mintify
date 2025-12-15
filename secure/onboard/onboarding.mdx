@@ -5,7 +5,7 @@ icon: "cloud"
 ---
 
 <Tabs>
-  <Tab title="AWS" icon="aws">
+  <Tab title="AWS">
     # AWS
 
     ## 1. Prerequisites
@@ -118,32 +118,37 @@ icon: "cloud"
 
     </div>
 
-<Steps>
-  <Step title="Step 1"> 
-    Log in to **Sysdig Secure**.
-  </Step>
-  <Step title="Step 2"> 
-    Click **Integrations** at the bottom of the main left-hand navigation menu, and choose **AWS Cloud Accounts**.
-  </Step>
-  <Step title="Step 3"> 
-    Choose whether to connect an AWS **Organization** or a **Single Account**.
-  </Step>
-  <Step title="Step 4">
-    For **Organization** accounts, In Step 2, enter your **AWS management Account ID** and select your **Primary Region**. For **Single Accounts**, enter only your **AWS Account ID**.
-  </Step>
-</Steps>
+    <Steps>
+      <Step title="Log in">
+        Log in to **Sysdig Secure**.
+      </Step>
+      <Step title="Click Integrations">
+        Click **Integrations** at the bottom of the main left-hand navigation menu, and choose **AWS Cloud Accounts**.
+      </Step>
+      <Step title="Choose account type">
+        Choose whether to connect an AWS **Organization** or a **Single Account**.
+      </Step>
+      <Step title="Enter IDs and region">
+        For **Organization** accounts, In Step 2, enter your **AWS management Account ID** and select your **Primary Region**. For **Single Accounts**, enter only your **AWS Account ID**.
+      </Step>
+      <Step title="Enter OUIDs">
+        In Step 3, you can onboard a subset of your Organization Accounts by entering the OUIDs in a comma-separated list. Leave the field blank to onboard your entire Organization.
+      </Step>
+      <Step title="Generate Terraform file">
+        In Step 4, click the **Next** button to generate a `main.tf` file to use with Terraform. Copy its contents and paste them into a new file, or download the file to an empty folder on your workstation, such as `/home/user/sysdig_onboarding`.
+      </Step>
+      <Step title="Execute Terraform">
+        - On your **workstation**, navigate using the CLI to the folder containing your main.tf file and execute the following commands:
 
-    - In Step 3, you can onboard a subset of your Organization Accounts by entering the OUIDs in a comma-separated list. Leave the field blank to onboard your entire Organization.
-    - In Step 4, click the **Next** button to generate a `main.tf` file to use with Terraform. Copy its contents and paste them into a new file, or download the file to an empty folder on your workstation, such as `/home/user/sysdig_onboarding`.
-    - On your **workstation**, navigate using the CLI to the folder containing your main.tf file and execute the following commands:
-
-    ```
-    $ cd /home/user/sysdig_onboarding   # Your main.tf file location
-    $ terraform init && terraform apply
-    ```
-
-    - When Terraform completes, click the **Complete Onboarding** button in the Sysdig Secure dashboard. Your newly added account will appear in the **Cloud Accounts** page.
-
+        ```
+        $ cd /home/user/sysdig_onboarding   # Your main.tf file location
+        $ terraform init && terraform apply
+        ```
+      </Step>
+      <Step title="Complete Onboarding">
+        - When Terraform completes, click the **Complete Onboarding** button in the Sysdig Secure dashboard. Your newly added account will appear in the **Cloud Accounts** page.
+      </Step>
+    </Steps>
     ## 4. Connect with CloudFormation
 
     - Log in to **Sysdig Secure**.
@@ -165,11 +170,11 @@ icon: "cloud"
     Select the desired AWS account to review the individual services in the detail drawer. There you can view the status of each feature you've enabled.
 
     <Accordion title="See an Example of the Health Status for CSPM" icon="circle-question">
-      | **CSPM Status**       | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-      | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-      | ✅ **Healthy**         | The account has been successfully connected, and all the resources have been scanned.                                                                                                                                                                                                                                                                                                                                                                                                                  |
-      | **! Needs Attention** | Some features are not working properly.                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-      | ❌ **Error**           | Authentication errors. For example: <ul>       <li>       Invalid account ID</li>              <li>       Invalid client secret</li>              <li>       Invalid access credentials</li>              <li>       Access token errors</li>              <li>       Deny policy created by the user is preventing Sysdig from collecting resources</li>              <li>       The scan takes too long and eventually times out.</li>              <li>       Unknown error</li>              </ul> |
+      | **CSPM Status**       | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+      | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+      | ✅ **Healthy**         | The account has been successfully connected, and all the resources have been scanned.                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+      | **! Needs Attention** | Some features are not working properly.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+      | ❌ **Error**           | Authentication errors. For example: <ul>        <li>        Invalid account ID</li>                <li>        Invalid client secret</li>                <li>        Invalid access credentials</li>                <li>        Access token errors</li>                <li>        Deny policy created by the user is preventing Sysdig from collecting resources</li>                <li>        The scan takes too long and eventually times out.</li>                <li>        Unknown error</li>                </ul> |
     </Accordion>
     ## Further Reading
 
@@ -209,7 +214,7 @@ icon: "cloud"
     </Accordion>
     [_(Original: https://docs.sysdig.com/en/sysdig-secure/connect-aws/)_](https://docs.sysdig.com/en/sysdig-secure/connect-aws/)
   </Tab>
-  <Tab title="Azure" icon="microsoft">
+  <Tab title="Azure">
     # Azure
 
     <Accordion title="Cloud Security Posture Management (CSPM)">
@@ -352,10 +357,10 @@ icon: "cloud"
     | Healthy ✅   | The account has been successfully connected, and all the resources have been scanned.                                                                                                                                                                                      |
     | Error ❌     | Authentication errors. For example: Invalid account ID Invalid client secret Invalid access credentials Access token errors Deny policy created by the user is preventing Sysdig from collecting resources The scan takes too long and eventually times out. Unknown error |
   </Tab>
-  <Tab title="GCP" icon="google">
+  <Tab title="GCP">
     # GCP
   </Tab>
-  <Tab title="OCI" icon="database">
+  <Tab title="OCI">
     # OCI
   </Tab>
 </Tabs>
