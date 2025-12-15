@@ -222,10 +222,11 @@
             "group": "Get Started",
             "pages": [
               "monitor/index",
+              "monitor/onboarding",
             {
-              "group": "Cloud Onboarding",
+              "group": "Advisor",
               "expanded": false,
-              "icon": "cloud",
+              "icon": "comment",
               "pages": [
                 "monitor/aws/",
                 "monitor/azure",
@@ -235,9 +236,9 @@
               ]
             },
            {
-            "group": "Configure Scans",
+            "group": "Costs",
             "expanded": false,
-            "icon": "gear",
+            "icon": "dollar-sign",
             "pages": [
               "test"
             ]

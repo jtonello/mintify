@@ -4,6 +4,188 @@ description: "This topic explains how to install Cluster Shield and Host Shield 
 icon: "cloud"
 ---
 
+<Tabs>
+  <Tab title="AWS Cloud Watch">
+
+# CloudWatch Monitoring
+
+You can forward metrics from AWS CloudWatch to Sysdig Monitor using AWS Metric Streams or the CloudWatch API. This provides cloud account visibility over AWS services, such as Lambda, Elastic Load Balancers (ELB) , and Simple Storage Service (S3). You can configure Cloudwatch integration using Cloudformation or Terraform.
+
+### Compare AWS Metric Streams and CloudWatch APIs
+
+Forwarding CloudWatch Metric Streams to Sysdig Monitor offers more granular data, lower latency, and better scalability, though it requires additional AWS resources that incur AWS charges. On the other hand, using the CloudWatch API is easier to set up but delivers less granular data with higher latency, which may not be ideal for troubleshooting.
+
+| Metric Streams | CloudWatch APIs |
+| ----- | ----- |
+| Monitors all the AWS services including custom namespaces | Monitors a limited set of AWS services (ELB, ALB, RedshiftCluster, EBS, DynamoDB, EC2, ElastiCache, EMR, RDS, and SQS) |
+| 1-minute metric granularity | 5-minute metric granularity |
+| No API polling is needed, eliminating the potential for API throttling | AWS CloudWatch API must be polled for metrics, leading to potential API throttling |
+
+### Connect Sysdig Monitor to AWS CloudWatch Metric Streams
+
+CloudWatch Metric Streams can be provisioned with Terraform or Cloudformation. In both cases, the following resources are created in your AWS environment:
+
+* aws\_cloudwatch\_log\_group.sysdig\_stream\_logs  
+* aws\_cloudwatch\_log\_stream.http\_log\_stream  
+* aws\_cloudwatch\_log\_stream.s3\_backup  
+* aws\_cloudwatch\_metric\_stream.sysdig\_metric\_stream\_all\_namespaces  
+* aws\_iam\_role.service\_role  
+* aws\_iam\_role.sysdig\_cloudwatch\_integration\_monitoring\_role  
+* aws\_iam\_role.sysdig\_cloudwatch\_metric\_stream\_role  
+* aws\_iam\_role\_policy.cloud\_monitoring\_policy  
+* aws\_kinesis\_firehose\_delivery\_stream.sysdig\_metric\_kinesis\_firehose  
+* aws\_s3\_bucket.sysdig\_stream\_backup\_bucket
+
+### Provision AWS CloudWatch Metric Streams with Terraform
+
+For details on provisioning AWS CloudWatch Metric Streams, see the [Sysdig Monitor Terraform Repository](https://github.com/sysdiglabs/terraform-aws-monitor-for-cloud/tree/main).
+
+### Provision AWS CloudWatch Metric Streams with Cloudformation
+
+1. Log in to Sysdig Monitor as an Admin.  
+2. In the left sidebar, select Integration \> Cloud Accounts.  
+   The Cloud Accounts page appears.  
+3. Select Add Account \> AWS \> CloudWatch Monitoring \> CloudWatch Metric Streams.  
+4. Open Use Cloudformation Template to load a Cloudformation stack that provisions CloudWatch Metric Streams.
+
+### Connect Sysdig Monitor to the AWS CloudWatch API
+
+Sysdig Monitor recommends using role delegation to poll the CloudWatch API in your AWS account. To enable this, Sysdig Monitor must be allowed to assume an IAM role in your AWS account with the necessary permissions. For instructions to set up cross-account IAM role delegation, see [Enable AWS Role Delegation with API](https://docs.sysdig.com/en/docs/administration/administration-settings/outbound-integrations/aws-integrate-aws-account-and-cloudwatch-metrics-optional/integrate-with-aws-role-delegation/#enable-aws-role-delegation-with-api).
+
+Alternatively, you can provide an IAM access key and secret key with the same permissions.
+
+```
+{
+   "Version": "2012-10-17",
+   "Statement": [
+       {
+           "Action": [
+               "autoscaling:Describe*",
+               "cloudwatch:Describe*",
+               "cloudwatch:Get*",
+               "cloudwatch:List*",
+               "dynamodb:ListTables",
+               "dynamodb:Describe*",
+               "ec2:Describe*",
+               "ecs:Describe*",
+               "ecs:List*",
+               "elasticache:DescribeCacheClusters",
+               "elasticache:ListTagsForResource",
+               "elasticloadbalancing:Describe*",
+               "rds:Describe*",
+               "rds:ListTagsForResource",
+               "sqs:ListQueues",
+               "sqs:GetQueueAttributes",
+               "sqs:ReceiveMessage"
+           ],
+           "Effect": "Allow",
+           "Resource": "*"
+       }
+   ]
+}
+```
+
+## Enable CloudWatch Metric Streams in On-Prem Deployments
+
+Sysdig on-prem versions 6.1.1 and above can collect various types of CloudWatch Metric Streams from your AWS environment. This page outlines the pre-requisites and steps to enable this service in your on-prem deployment.
+
+### Prerequisites
+
+* Public key certificate: AWS CloudWatch Metric Streams require a public signed-certificate to execute `POST` request to Sysdig endpoint over https and to validate the certificate. Self-signed certificates will not work.  
+* AWS access key and AWS secret key. Sysdig installation uses the credentials to assume the role when you add the AWS account with the credentials.
+
+### Installation
+
+1. Determine your environment and follow the instructions as given in the [On-Prem Installation documentation](https://github.com/draios/onprem-install-docs).  
+2. Download the installer image.  
+   We recommend that you contact your Sysdig Technical Account Manager to help you with the installation that matches your distribution.  
+3. Ensure that the directory with the certificates and the `values.yaml` are at the same directory level. For example:
+
+```
+$ ls
+certs   installer-darwin-amd65  values.yaml
+
+$ ls certs
+my.server.cert  my.server.key
+
+```
+  
+4. In the `values.yaml` file, configure parameters as follows:
+
+```
+sysdig:
+  ....
+  # this flag enables cloudwatch metric streams converter service
+  cloudwatchMetricConverter:
+    enabled: true
+
+  # AWS secret key and access key that will be used by backend to assume role
+  # if user adds account with role delegation
+  secretKey: <AWS secret access key>
+  accessKey: <AWS access key>
+
+  # This is to avoid generating self-signed certificates and use custom certificates
+  # path is relative to values.yaml file
+  certificate:
+    generate: false
+
+    # In some cases this should be a full chain file
+    # with certificate for particular URL plus intermediate certificate(s)
+    # plus root certificate
+    crt: certs/my.server.crt
+    key: certs/my.server.key
+```  
+
+With the changes in the `values.yaml` file, the Installer will update the Sysdig backend to enable AWS Cloudwatch Metric Streams.
+
+Starting from on-premise version 7.4.0 the `values.yaml` schema has changed. See the [release notes](https://docs.sysdig.com/en/release-notes/sysdig-on-premises-release-notes/#helm-values-restructuring) for more details.
+
+#### YAML Configuration (version 7.4.0 and later)
+
+```
+cloudwatchMetricStreamsConverter:
+  enabled: true
+global:
+  accessKey: <AWS secret access key>
+  secretKey: <AWS access key>
+  certificate:
+    generate: false
+    crt: certs/my.server.crt
+    key: certs/my.server.key
+```
+
+5. Continue with the [on-premise installation](https://github.com/draios/onprem-install-docs).
+
+    
+  </Tab>
+
+
+
+
+
+
+  
+  <Tab title="AWS Cost & Usage">
+    
+  </Tab>
+  <Tab title="AWS Lambda">
+    
+  </Tab>
+  <Tab title="Azure">
+    
+  </Tab>
+  <Tab title="GCP>
+    
+  </Tab>
+  <Tab title="Kubernetes>
+    
+  </Tab>
+  <Tab title="Hosts>
+    
+  </Tab>
+</Tabs>
+
+
 Follow the installation instructions in this topic to install Cluster Shield and Host Shield in your monitoring environment. They send system performance metrics and events to Sysdig Monitor, ensuring comprehensive visibility into your infrastructure. Review the requirements and select the installation path that best suits your setup.
 
 If you are both a Sysdig Monitor and Secure user, follow the [Sysdig Secure installation](/secure/onboard/onboarding#aws) process to obtain the features of both products.
