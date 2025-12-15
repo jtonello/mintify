@@ -118,10 +118,21 @@ icon: "cloud"
 
     </div>
 
-    - Log in to **Sysdig Secure**.
-    - Click **Integrations** at the bottom of the main left-hand navigation menu, and choose **AWS Cloud Accounts**.
-    - Choose whether to connect an AWS **Organization** or a **Single Account**.
-    - For **Organization** accounts, In Step 2, enter your **AWS management Account ID** and select your **Primary Region**. For **Single Accounts**, enter only your **AWS Account ID**.
+<Steps>
+  <Step title="Step 1"> 
+    Log in to **Sysdig Secure**.
+  </Step>
+  <Step title="Step 2"> 
+    Click **Integrations** at the bottom of the main left-hand navigation menu, and choose **AWS Cloud Accounts**.
+  </Step>
+  <Step title="Step 3"> 
+    Choose whether to connect an AWS **Organization** or a **Single Account**.
+  </Step>
+  <Step title="Step 4">
+    For **Organization** accounts, In Step 2, enter your **AWS management Account ID** and select your **Primary Region**. For **Single Accounts**, enter only your **AWS Account ID**.
+  </Step>
+</Steps>
+
     - In Step 3, you can onboard a subset of your Organization Accounts by entering the OUIDs in a comma-separated list. Leave the field blank to onboard your entire Organization.
     - In Step 4, click the **Next** button to generate a `main.tf` file to use with Terraform. Copy its contents and paste them into a new file, or download the file to an empty folder on your workstation, such as `/home/user/sysdig_onboarding`.
     - On your **workstation**, navigate using the CLI to the folder containing your main.tf file and execute the following commands:
