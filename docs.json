@@ -19,7 +19,7 @@
           {
             "group": "Get Started",
             "pages": [
-              "<Icon icon='cloud'>secure/onboard/onboarding",
+              "secure/onboard/onboarding",
             {
               "group": "Onboard On-Prem",
               "expanded": false,
