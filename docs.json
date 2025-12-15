@@ -197,7 +197,19 @@
             ]
           }
         ]
-      }    
+      },
+      {
+        "group": "Knowledge Base",
+        "pages": [
+          {
+            "group": "Use cases",
+            "expanded": false,
+            "icon": "atom",
+            "pages": [
+              "This",
+              "That",
+              "The Other"
+            ]
     ]
   },
       {
