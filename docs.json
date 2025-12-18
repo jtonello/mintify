@@ -309,7 +309,7 @@
               "release_notes/monitor_saas",
               "release_notes/secure_saas",
               "release_notes/on_prem",
-              "release_notes/falso_rules",
+              "release_notes/falco_rules",
               "release_notes/behavioral_analytics"
             ]
           }
