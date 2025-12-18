@@ -58,21 +58,21 @@ icon: "circle-question"
     - On the product UI, see Select Integrations \> Data Sources \> Sysdig Agent.
     - Use the following command:
 
-    Agent in a non-container environment:
+    **Agent in a non-container environment**:
 
     ```
     /opt/draios/bin/dragent --version
     ```
 
-    Agent in a container:
+    **Agent in a container**:
 
     ```
     sudo docker exec -it <container_id> /opt/draios/bin/dragent --version
     ```
 
-    Agent in Kubernetes:
+    **Agent in Kubernetes**:
 
-    ``` expandable
+    ```expandable
     kubectl -n sysdig-agent exec -ti <agent_pod> -c sysdig -- bash -c "/opt/draios/bin/dragent --version"
     ```
 
