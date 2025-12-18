@@ -272,7 +272,7 @@
         "tab": "Administration",
         "groups": [
           {
-            "group": "Topics",
+            "group": "Administration",
             "pages": [
               "administration/index",
                "administration/agent_access_keys",
