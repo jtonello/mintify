@@ -278,12 +278,30 @@
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Topics",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "administration/agent_access_keys",
+              "administration/agent_modes",
+              "administration/authentication_and_authorization",
+              "administration/aws_cloudwatch_metrics",
+              "administration/certificates_management",
+              "administration/customer_id_name_external_id",
+              "administration/data_retention",
+              "administration/group_mappings",
+              "administration/ip_allowlist",
+              "administration/login_message",
+              "administration/notification_channels",
+              "administration/onprem_deployments",
+              "administration/privacy_settings",
+              "administration/s3_capture_storage",
+              "administration/saas_regions_and_ip_ranges",
+              "administration/subscription",
+              "administration/sysdig_api_token",
+              "administration/sysdig_app_status",
+              "administration/sysdig_platform_audit",
+              "administration/theme_preference",
+              "administration/user_and_team_administration",
+              "administration/user_profile"
             ]
           }
         ]
