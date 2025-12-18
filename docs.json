@@ -272,15 +272,10 @@
         "tab": "Administration",
         "groups": [
           {
-            "group": "Administration",
-            "pages": [
-              "administration/"
-            ]
-          },
-          {
             "group": "Topics",
             "pages": [
-              "administration/agent_access_keys",
+              "administration/index",
+               "administration/agent_access_keys",
               "administration/agent_modes",
               "administration/authentication_and_authorization",
               "administration/aws_cloudwatch_metrics",
@@ -302,6 +297,12 @@
               "administration/theme_preference",
               "administration/user_and_team_administration",
               "administration/user_profile"
+            ]
+          },
+          {
+            "group": "Legacy",
+            "pages": [
+              "administration/aws_cloudwatch_metrics"
             ]
           }
         ]
