@@ -275,7 +275,7 @@
             "group": "Administration",
             "pages": [
               "administration/index",
-               "administration/agent_access_keys",
+              "administration/agent_access_keys",
               "administration/agent_modes",
               "administration/authentication_and_authorization",
               "administration/aws_cloudwatch_metrics",
