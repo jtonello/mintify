@@ -307,7 +307,7 @@
           }
         ]
       },
-       {
+      {
         "tab": "Release Notes",
         "groups": [
           {
@@ -330,6 +330,17 @@
               "release_notes/on_prem",
               "release_notes/falco_rules",
               "release_notes/behavioral_analytics"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Support",
+        "groups": [
+          {
+            "group": "Support",
+            "pages": [
+              "support/index"
             ]
           }
         ]
