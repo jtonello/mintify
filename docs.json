@@ -279,7 +279,7 @@
               "administration/agent_modes",
               "administration/authentication_and_authorization",
               "administration/aws_cloudwatch_metrics",
-              "administration/certificates_management",
+              "administration/certificates",
               "administration/customer_id_name_external_id",
               "administration/data_retention",
               "administration/group_mappings",
