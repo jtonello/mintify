@@ -272,9 +272,9 @@
         "tab": "Administration",
         "groups": [
           {
-            "group": "Configurations",
+            "group": "Administration",
             "pages": [
-              "administration"
+              "administration/"
             ]
           },
           {
@@ -287,10 +287,36 @@
             ]
           }
         ]
+      },
+       {
+        "tab": "Release Notes",
+        "groups": [
+          {
+            "group": "Release Notes",
+            "pages": [
+              "release_notes/"
+            ]
+          },
+          {
+            "group": "By Product",
+            "pages": [
+              "release_notes/cloud_shield",
+              "release_notes/cluster_shield",
+              "release_notes/host_shield",
+              "release_notes/linux_agent",
+              "release_notes/serverless_agent",
+              "release_notes/windows_agent",
+              "release_notes/monitor_saas",
+              "release_notes/secure_saas",
+              "release_notes/on_prem",
+              "release_notes/falso_rules",
+              "release_notes/behavioral_analytics"
+            ]
+          }
+        ]
       }
     ]
-  },
-  
+  },  
   "logo": {
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg"
