@@ -1,0 +1,95 @@
+---
+title: "Support"
+description: "Sysdig offers a wide range support for technical assistance. If you need help, open a support case in the Customer Support Portal. Use your Sysdig credentials to log in."
+icon: "circle-question"
+---
+
+<Tabs>
+  <Tab title="Open a Ticket">
+    ## Open a Ticket
+
+    Open a support ticket by filling in the [web-based form](https://cx.sysdig.com/s/web-to-case). It's important to provide Sysdig Support with relevant information about your system, including:
+
+    ### Specify Ticket Details
+
+    Add details in the Description box. See below for tips on what to enter:
+
+    ```
+    Operating System:
+    
+    Orchestrator:
+    
+    Agent Version:
+    
+    Company Name:
+    ```
+
+    #### Operating System
+
+    Review Host Requirements for Agent Installation to confirm that your operating system is supported.
+
+    Submitting the output of uname -a and lsb_release -a will help Sysdig support determine if the kernel is supported.
+
+    If you have a custom kernel and the kernel development headers are not available, you will not be able to install our agent.
+
+    Also note if the Linux distribution used inside your application’s container is not the same as the host.
+
+    <Tooltip tip="">lsb_release is part of a software package called the LSB core, which is not necessarily installed on your system by default. If it is not installed, see </Tooltip>[<Tooltip tip="">https://wiki.itcollege.ee/index.php/Lsb_release</Tooltip>](https://wiki.itcollege.ee/index.php/Lsb_release)<Tooltip tip="">.</Tooltip>
+
+    #### Orchestrator Details
+
+    When using the Sysdig agent in an orchestration infrastructure, such (Kubernetes, GKE, etc., submit the details of how the the infrastructure was installed.
+
+    For example:
+
+    - Which Kubernetes version
+    - The cloud provider being run under (AWS, GKE, etc.)
+    - The number of nodes
+    - The authentication method configured for the API server
+
+    #### Agent Version
+
+    To verify which agent version you are running, either:
+
+    - On the product UI, see Select Integrations \> Data Sources \> Sysdig Agent.
+    - Use the following command:
+
+    Agent in a non-container environment:
+
+    ```
+    /opt/draios/bin/dragent --version
+    ```
+
+    Agent in a container:
+
+    ```
+    sudo docker exec -it <container_id> /opt/draios/bin/dragent --version
+    ```
+
+    Agent in Kubernetes:
+
+    ```
+    kubectl -n sysdig-agent exec -ti <agent_pod> -c sysdig -- bash -c "/opt/draios/bin/dragent --version"
+    ```
+
+    Known issues may be resolved by upgrading to the latest agent version.
+
+    Agent release numbers are shown in the agent build list, and agent release notes can be accessed from the Release Notes
+  </Tab>
+  <Tab title="Check Status">
+    Scheduled maintenance can cause disruptions of service.
+
+    You can [check the status](https://sysdig.statuspage.io/) of scheduled maintenance and subscribe for updates.
+
+    Click SUBSCRIBE TO UPDATES to receive automated notifications.
+  </Tab>
+  <Tab title="Add Agent File">
+    Add Agent File
+  </Tab>
+  <Tab title="Add Browser File">
+    Add Browser File
+  </Tab>
+  <Tab title="Add Backend File">
+    Add Backend File
+  </Tab>
+</Tabs>
