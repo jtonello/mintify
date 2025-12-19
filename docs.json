@@ -17,20 +17,9 @@
         "tab": "Sysdig Secure",
         "groups": [
           {
-          "group": "Sysdig Secure",
-          "pages": [
-                "secure/index"
-              ]
-            }
-        ]
-      },
-      {
-        "group": "Get Started",
-        "pages": [
-          {
-            "group": "Cloud Onboarding",
-            "expanded": false,
+            "group": "Get Started",
             "pages": [
+              "secure/index",
               "secure/onboard/onboarding",
               "secure/onboard/onprem",
           {
@@ -88,9 +77,10 @@
                 "Syslog",
                 "Webhook"
               ]
-          }
-        ]
-      },
+            }
+            ]
+          },
+
       {
         "group": "Protect Your Workloads",
         "pages": [
