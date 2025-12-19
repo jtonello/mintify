@@ -20,7 +20,12 @@
             "group": "Sysdig Secure",
             "pages": [
               "secure/index"
-              ,
+            ]
+          },
+      {
+        "group": "Get Started",
+        "expanded": false,
+        "pages": [
           {
               "group": "Cloud Onboarding",
               "expanded": false,
