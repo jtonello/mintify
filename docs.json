@@ -45,7 +45,7 @@
               "expanded": false,
               "icon": "code",
               "pages": [
-                "/secure/devops_integrations/#AWS ECRS",
+                "/secure/devops_integrations/#aws-ecrs",
                 "Azure Container Registry",
                 "Backstage",
                 "GitHub Actions",
