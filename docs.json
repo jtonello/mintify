@@ -248,7 +248,7 @@
       }          
     ]
   },
-       {
+     {
         "tab": "Administration",
         "groups": [
           {
@@ -279,7 +279,15 @@
               "administration/user_profile"
             ]
           },
-                {
+          {
+            "group": "Legacy",
+            "pages": [
+              "administration/aws_cloudwatch_metrics"
+            ]
+          }
+        ]
+      },
+            {
         "tab": "API Reference",
         "groups": [
           {
@@ -295,14 +303,6 @@
               "api-reference/endpoint/create",
               "api-reference/endpoint/delete",
               "api-reference/endpoint/webhook"
-            ]
-          }
-        ]
-      },
-    {
-            "group": "Legacy",
-            "pages": [
-              "administration/aws_cloudwatch_metrics"
             ]
           }
         ]
