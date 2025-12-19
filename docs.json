@@ -17,17 +17,11 @@
         "tab": "Sysdig Secure",
         "groups": [
           {
-            "group": "Sysdig Secure",
+            "group": "Get Started",
             "pages": [
               "secure/index",
-              {
-                "group": "Get Started",
-                "expanded": true,
-                "pages": [   
-                  "secure/onboard/onboarding",
-                  "secure/onboard/onprem"
-                ]
-             },
+              "secure/onboard/onboarding",
+              "secure/onboard/onprem",
           {
               "group": "Configure Scans",
               "expanded": false,
@@ -254,7 +248,27 @@
       }          
     ]
   },
-     {
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "API documentation",
+            "pages": [
+              "api-reference/introduction"
+            ]
+          },
+          {
+            "group": "Endpoint examples",
+            "pages": [
+              "api-reference/endpoint/get",
+              "api-reference/endpoint/create",
+              "api-reference/endpoint/delete",
+              "api-reference/endpoint/webhook"
+            ]
+          }
+        ]
+      },
+       {
         "tab": "Administration",
         "groups": [
           {
@@ -289,26 +303,6 @@
             "group": "Legacy",
             "pages": [
               "administration/aws_cloudwatch_metrics"
-            ]
-          }
-        ]
-      },
-            {
-        "tab": "API Reference",
-        "groups": [
-          {
-            "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
             ]
           }
         ]
