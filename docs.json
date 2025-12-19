@@ -26,8 +26,8 @@
         "group": "Get Started",
         "expanded": false,
         "pages": [
-                "secure/onboard/onboarding",
-                "secure/onboard/onprem",
+                "secure/onboarding",
+                "secure/onprem",
             {
               "group": "Configure Scans",
               "expanded": false,
