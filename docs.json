@@ -53,13 +53,13 @@
                 "Google Registry",
                 "Harbor",
                 "IBM Container Registry",
-                "/secure/devops_integrations/#jenkins",
+                "/secure/devops_integrations/Jenkins",
                 "JFrog",
                 "Nexus",
                 "OpenShift",
                 "Private Registry",
                 "Quay.io",
-                "ServiceNow",
+                "/secure/devops_integrations/#ServiceNow",
                 "Visual Studio Code"
               ]
             },
