@@ -16,6 +16,19 @@
       {
         "tab": "Sysdig Secure",
         "groups": [
+                {
+        "group": "Sysdig Secure",
+        "pages": [
+          {
+            "group": "About Sysdig Secure",
+            "expanded": false,
+            "icon": "shield",
+            "pages": [
+              "secure/index"
+            ]
+          }
+        ]
+      },
           {
             "group": "Get Started",
             "pages": [
@@ -78,9 +91,8 @@
                 "Webhook"
               ]
             }
-            ]
-          },
-
+        ]
+      },
       {
         "group": "Protect Your Workloads",
         "pages": [
