@@ -17,12 +17,19 @@
         "tab": "Sysdig Secure",
         "groups": [
           {
-            "group": "Get Started",
+            "group": "Sysdig Secure",
             "pages": [
               "secure/index",
-              "secure/onboard/onboarding",
-              "secure/onboard/onprem",
           {
+              "group": "Get Started",
+              "expanded": false,
+              "icon": "gear",
+              "pages": [
+                "secure/onboard/onboarding",
+              "secure/onboard/onprem"
+              ]
+            },
+            {
               "group": "Configure Scans",
               "expanded": false,
               "icon": "gear",
