@@ -26,15 +26,8 @@
         "group": "Get Started",
         "expanded": false,
         "pages": [
-          {
-              "group": "Cloud Onboarding",
-              "expanded": false,
-              "icon": "cloud",
-              "pages": [
                 "secure/onboard/onboarding",
-                "secure/onboard/onprem"
-              ]
-            },
+                "secure/onboard/onprem",
             {
               "group": "Configure Scans",
               "expanded": false,
