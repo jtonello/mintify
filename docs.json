@@ -333,17 +333,6 @@
             ]
           }
         ]
-      },
-      {
-        "tab": "Support",
-        "groups": [
-          {
-            "group": "Support",
-            "pages": [
-              "support/index"
-            ]
-          }
-        ]
       }
     ]
   },  
