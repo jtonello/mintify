@@ -233,9 +233,14 @@
         "tab": "Sysdig Monitor",
         "groups": [
           {
-            "group": "Get Started",
+            "group": "Sysdig Monitor",
             "pages": [
-              "monitor/index",
+              "monitor/index"
+            ]
+      },
+      {
+        "group": "Onboarding",
+        "pages": [
               "monitor/onboard/onboarding",
             {
               "group": "Advisor",
