@@ -16,23 +16,21 @@
       {
         "tab": "Sysdig Secure",
         "groups": [
-                {
-        "group": "Sysdig Secure",
-        "pages": [
           {
-            "group": "About Sysdig Secure",
-            "expanded": false,
-            "icon": "shield",
-            "pages": [
-              "secure/index"
-            ]
-          }
+          "group": "Sysdig Secure",
+          "pages": [
+                "secure/index"
+              ]
+            }
         ]
       },
+      {
+        "group": "Get Started",
+        "pages": [
           {
-            "group": "Get Started",
+            "group": "Cloud Onboarding",
+            "expanded": false,
             "pages": [
-              "secure/index",
               "secure/onboard/onboarding",
               "secure/onboard/onprem",
           {
@@ -90,7 +88,7 @@
                 "Syslog",
                 "Webhook"
               ]
-            }
+          }
         ]
       },
       {
