@@ -27,7 +27,7 @@
                   "secure/onboard/onboarding",
                   "secure/onboard/onprem"
                 ]
-              },
+             },
           {
               "group": "Configure Scans",
               "expanded": false,
