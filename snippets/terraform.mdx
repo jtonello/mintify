@@ -1,0 +1,64 @@
+---
+title: "Terraform"
+---
+ - For Terraform, use the command line to export your AWS keys, or see the [AWS Terraform Provider documentation](https://registry.terraform.io/providers/hashicorp/aws/latest/docs#authentication-and-configuration) for other ways to authenticate.
+
+      ```
+          export AWS_ACCESS_KEY_ID="anaccesskey"
+          export AWS_SECRET_ACCESS_KEY="asecretkey"
+          export AWS_REGION="us-east-1"
+      ```
+
+      If you're using [AWS CLI](https://aws.amazon.com/cli/), run `aws configure` from your workstation command line or edit the `/home/user/.aws/credentials` file:
+
+      From the CLI, it will look something like this:
+
+      ```
+      AWS Access Key ID [****************L64C]: 
+      AWS Secret Access Key [****************5JsZ]: 
+      AWS Session Token [****************y2Cp]: 
+      Default region name [us-east-1]: 
+      Default output format [None]:          # Leave blank
+      ```
+
+      In the `~/.aws/credentials` file, it will look something like this:
+
+      ```
+      [default]
+      aws_access_key_id=****************L64C
+      aws_secret_access_key=****************5JsZ
+      aws_session_token=****************y2Cp   # A long value sometimes necessary for orgranizations using SSO
+      ```
+
+      You can also set your default AWS region as part of `aws configure` or set it in `/home/user/.aws/config` by adding:
+
+      ```
+      [default]
+      region = us-east-1      # Set to your region
+      ```
+
+      Check your workstation's connection and authentication with AWS with this AWS CLI command:
+
+      ```
+      aws sts get-caller-identity
+      ```
+
+      To get your AWS Account ID, use this command via AWS CLI or the AWS Console terminal:
+
+      ```
+      aws sts get-caller-identity \
+          --query Account \
+          --output text
+      ```
+
+      To see the **roles** associated with your account, use this command via AWS CLI or the AWS Console terminal:
+
+      ```
+      aws iam list-roles
+      ```
+
+      To see the **policies** associated with your account, use this command via AWS CLI or the AWS Console terminal:
+
+      ```
+      aws iam list-policies
+      ```
