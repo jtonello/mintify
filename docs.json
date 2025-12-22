@@ -15,6 +15,7 @@
     "tabs": [
       {
         "tab": "Sysdig Secure",
+        "icon": "https://docs.sysdig.com/icons/icon-security.svg",
         "groups": [
           {
             "group": "Sysdig Secure",
