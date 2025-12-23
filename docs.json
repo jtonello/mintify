@@ -304,7 +304,7 @@
         "icon": "https://img.icons8.com/?size=100&id=21887&format=png&color=000000",
         "groups": [
           {
-            "group": "Users API",
+            "group": "API Reference",
             "openapi": {
               "source": "/api-reference/public-api-spec.yaml",
               "directory": "users-api-reference"
