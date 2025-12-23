@@ -15,7 +15,7 @@
     "tabs": [
       {
         "tab": "Sysdig Secure",
-        "icon": "https://www.figma.com/design/XZsuFlmtIxiUw1ztmOH1Bn/Logos?node-id=679-7029&m=dev",
+        "icon": "shield",
         "groups": [
           {
             "group": "Sysdig Secure",

@@ -3,9 +3,9 @@ title: "Cloud Onboarding"
 description: "This topic describes how to connect your AWS, Azure, GCP and OCI environments to Sysdig Secure. Click a tab below to select the platform you want to set up. You can connect Single Accounts or entire Organization Accounts using Terraform or CloudFormation."
 icon: "cloud"
 ---
-      
+
 <Tabs>
-  <Tab title="AWS" icon="/images/mark-aws_bw.svg">
+  <Tab title="AWS">
     # AWS
 
     <video controls className="w-full aspect-video rounded-xl" src="/video/onboarding01_1080.mp4" />
@@ -17,11 +17,9 @@ icon: "cloud"
     - A local workstation with **Terraform v1.5+** installed or access to **CloudFormation**.
 
     <Accordion title="Click to Learn More About Using Terraform and AWS CLI" icon="square-chevron-right">
+      import TerraformSnippet from '/snippets/terraform-snippet.mdx';
 
-import TerraformSnippet from '/snippets/terraform-snippet.mdx';
-
-<TerraformSnippet/>
-      
+      <TerraformSnippet />
     </Accordion>
     <Accordion title="Click to Learn More About IAM Permissions" icon="circle-question">
       | Access                                                                                                                                | Description                                                                                               |
@@ -116,11 +114,11 @@ import TerraformSnippet from '/snippets/terraform-snippet.mdx';
     Select the desired AWS account to review the individual services in the detail drawer. There you can view the status of each feature you've enabled.
 
     <Accordion title="See an Example of the Health Status for CSPM" icon="circle-question">
-      | **CSPM Status**       | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-      | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-      | ✅ **Healthy**         | The account has been successfully connected, and all the resources have been scanned.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-      | **! Needs Attention** | Some features are not working properly.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-      | ❌ **Error**           | Authentication errors. For example: <ul>                          <li>                          Invalid account ID</li>                                                    <li>                          Invalid client secret</li>                                                    <li>                          Invalid access credentials</li>                                                    <li>                          Access token errors</li>                                                    <li>                          Deny policy created by the user is preventing Sysdig from collecting resources</li>                                                    <li>                          The scan takes too long and eventually times out.</li>                                                    <li>                          Unknown error</li>                                                    </ul> |
+      | **CSPM Status**       | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+      | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+      | ✅ **Healthy**         | The account has been successfully connected, and all the resources have been scanned.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+      | **! Needs Attention** | Some features are not working properly.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+      | ❌ **Error**           | Authentication errors. For example: <ul>                            <li>                            Invalid account ID</li>                                                        <li>                            Invalid client secret</li>                                                        <li>                            Invalid access credentials</li>                                                        <li>                            Access token errors</li>                                                        <li>                            Deny policy created by the user is preventing Sysdig from collecting resources</li>                                                        <li>                            The scan takes too long and eventually times out.</li>                                                        <li>                            Unknown error</li>                                                        </ul> |
     </Accordion>
     ## Further Reading
 
@@ -160,7 +158,7 @@ import TerraformSnippet from '/snippets/terraform-snippet.mdx';
     </Accordion>
     [_(Original: https://docs.sysdig.com/en/sysdig-secure/connect-aws/)_](https://docs.sysdig.com/en/sysdig-secure/connect-aws/)
   </Tab>
-  <Tab title="Azure" icon="/images/mark-azure_bw.svg"> 
+  <Tab title="Azure">
     # Azure
 
     <Accordion title="Cloud Security Posture Management (CSPM)">
@@ -306,10 +304,10 @@ import TerraformSnippet from '/snippets/terraform-snippet.mdx';
     | Healthy ✅   | The account has been successfully connected, and all the resources have been scanned.                                                                                                                                                                                      |
     | Error ❌     | Authentication errors. For example: Invalid account ID Invalid client secret Invalid access credentials Access token errors Deny policy created by the user is preventing Sysdig from collecting resources The scan takes too long and eventually times out. Unknown error |
   </Tab>
-  <Tab title="GCP" icon="/images/mark-gcp_bw.svg">
+  <Tab title="GCP">
     # GCP
   </Tab>
-  <Tab title="OCI" icon="/images/cloud_bw.svg">
+  <Tab title="OCI">
     # OCI
   </Tab>
 </Tabs>
