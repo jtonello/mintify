@@ -305,6 +305,7 @@
         "groups": [
           {
             "group": "API Reference",
+            "expanded": false,
             "openapi": {
               "source": "/api-reference/public-api-spec.yaml",
               "directory": "users-api-reference"
