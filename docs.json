@@ -306,7 +306,7 @@
           {
             "group": "Users API",
             "openapi": {
-              "source": "/api-reference/openai.json",
+              "source": "/api-reference/public-api-spec.yaml",
               "directory": "users-api-reference"
             }
           }
