@@ -304,19 +304,11 @@
         "icon": "https://img.icons8.com/?size=100&id=21887&format=png&color=000000",
         "groups": [
           {
-            "group": "API Reference",
-            "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
-            ]
+            "group": "Users API",
+            "openapi": {
+              "source": "/api-reference/public-api-spec.yaml",
+              "directory": "users-api-reference"
+            }
           }
         ]
       },
