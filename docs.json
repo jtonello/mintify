@@ -273,21 +273,14 @@
             "group": "Admin Tasks",
             "expand": false,
             "pages": [
-              "administration/agent_access_keys",
               "administration/agent_modes",
               "administration/authentication_and_authorization",
               "administration/aws_cloudwatch_metrics",
               "administration/certificates",
-              "administration/customer_id_name_external_id",
               "administration/data_retention",
               "administration/group_mappings",
-              "administration/ip_allowlist",
-              "administration/onprem_deployments",
-              "administration/privacy_settings",
               "administration/s3_capture_storage",
               "administration/saas_regions_and_ip_ranges",
-              "administration/subscription",
-              "administration/sysdig_api_token",
               "administration/sysdig_app_status",
               "administration/sysdig_platform_audit",
               "administration/users_and_teams",
@@ -295,10 +288,16 @@
             ]
           },
           {
-            "group": "Dashboard Settings",
+            "group": "Dashboard Actions & Settings",
             "pages": [
+              "administration/agent_access_keys",
+              "administration/sysdig_api_token",
+              "administration/customer_id_name_external_id",
+              "administration/ip_allowlist",
               "administration/login_message",
               "administration/notification_channels",
+              "administration/privacy_settings",
+              "administration/subscription",
               "administration/theme_preference"
             ]
           },
