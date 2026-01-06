@@ -84,36 +84,19 @@
                 "Syslog",
                 "Webhook"
               ]
-            }
-            ]
-          },
-
+        },
       {
         "group": "Protect Your Workloads",
         "pages": [
-          {
-            "group": "Install Host Shield",
-            "expanded": false,
-            "icon": "shield",
-            "pages": [
-              "Kubernetes",
-              "Linux",
-              "Windows"
-            ]
-          },
-          {
-            "group": "Tune Your Setup",
-            "expanded": false,
-            "icon": "circle-half-stroke",
-            "pages": [
-              "Automatic Onboarding",
-              "Selective Onboarding",
-              "Permissions"
+            "/secure/automatic_onboarding",
+            "/secure/host_shield",
+            "/secure/permissions",
+            "/secure/pipeline_scanning",
+            "/secure/registry_scanning"            
             ]
           }
         ]
       },
-
       {
         "group": "Using Sysdig Secure",
         "pages": [
