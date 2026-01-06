@@ -287,7 +287,7 @@
               "administration/sysdig_app_status",
               "administration/sysdig_platform_audit",
               "administration/theme_preference",
-              "administration/user_and_team_administration",
+              "administration/users_and_teams",
               "administration/user_profile"
             ]
           },
