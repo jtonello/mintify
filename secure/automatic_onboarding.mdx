@@ -1,0 +1,40 @@
+---
+title: "Automatic Onboarding"
+description: "Automatic Cloud Account Onboarding detects and adds new, active cloud accounts to Sysdig. No manual steps required. This capability keeps your cloud environment up-to-date, and it can be enabled or disabled at any time using the Sysdig dashboard or Terraform."
+---
+
+<Tabs>
+  <Tab title="AWS">
+    ## Prerequisites
+
+    - AWS account with administrative privileges
+    - Sysdig Secure account with organization admin rights
+
+    ## Automatic Cloud Account Onboarding Steps
+
+    The following steps outline the process for automatic cloud account onboarding:
+
+    1. Log in to Sysdig Secure.
+    2. Go to **Integrations** \> **AWS**.
+    3. Click **Add AWS Account**.
+    4. Select **Organization**.
+    5. Under **Terraform**, when you prepare for onboarding, go to the step **Accounts to Onboard**. You will see **Automatic Onboarding & Offboarding** enabled by default.
+
+    When you deploy Terraform, you will notice `enable_automatic_onboarding = true` in the snippet.
+
+    ## Testing Automatic Cloud Account Onboarding
+
+    Once you have completed onboarding of one account, you can go ahead and add multiple accounts to your organization. Any newly created AWS accounts that are in active state within the organization will be automatically detected and onboarded. You can verify this through **Integrations** \> **Cloud Accounts** \> **AWS**. The new accounts will be listed and the status should show as **Connected**.
+
+    For example, the following image shows the newly onboarded account:
+  </Tab>
+  <Tab title="Azure">
+    
+  </Tab>
+  <Tab title="GCP">
+    
+  </Tab>
+  <Tab title="OCI">
+    
+  </Tab>
+</Tabs>
