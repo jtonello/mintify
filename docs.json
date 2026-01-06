@@ -84,7 +84,9 @@
                 "Syslog",
                 "Webhook"
               ]
-        },
+            }
+        ]
+      },
       {
         "group": "Protect Your Workloads",
         "pages": [
@@ -93,8 +95,6 @@
             "/secure/permissions",
             "/secure/pipeline_scanning",
             "/secure/registry_scanning"            
-            ]
-          }
         ]
       },
       {
