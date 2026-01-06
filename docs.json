@@ -266,7 +266,14 @@
           {
             "group": "Administration",
             "pages": [
-              "administration/index",
+              "administration/index"
+            ]
+          },
+          {
+            "group": "Admin Tasks",
+            "expand": false,
+            "icon": "admin",
+            "pages": [
               "administration/agent_access_keys",
               "administration/agent_modes",
               "administration/authentication_and_authorization",
