@@ -272,7 +272,6 @@
           {
             "group": "Admin Tasks",
             "expand": false,
-            "icon": "admin",
             "pages": [
               "administration/agent_access_keys",
               "administration/agent_modes",
