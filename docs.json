@@ -282,8 +282,6 @@
               "administration/data_retention",
               "administration/group_mappings",
               "administration/ip_allowlist",
-              "administration/login_message",
-              "administration/notification_channels",
               "administration/onprem_deployments",
               "administration/privacy_settings",
               "administration/s3_capture_storage",
@@ -292,9 +290,16 @@
               "administration/sysdig_api_token",
               "administration/sysdig_app_status",
               "administration/sysdig_platform_audit",
-              "administration/theme_preference",
               "administration/users_and_teams",
               "administration/user_profile"
+            ]
+          },
+          {
+            "group": "Dashboard Settings",
+            "pages": [
+              "administration/login_message",
+              "administration/notification_channels",
+              "administration/theme_preference"
             ]
           },
           {
